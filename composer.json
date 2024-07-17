@@ -1,0 +1,22 @@
+{
+    "name": "andijaya/php-proto-dev",
+    "description": "percobaan script php",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Andijaya\\PhpProtoDev\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "andijayawizard",
+            "email": "andijayawizard@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "robmorgan/phinx": "^0.16.1"
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
