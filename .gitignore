@@ -1,4 +1,7 @@
 /vendor
+/api/api.php
+
+.env
 
 composer.lock
 package-lock.json

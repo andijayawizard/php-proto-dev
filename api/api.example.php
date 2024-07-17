@@ -4717,9 +4717,9 @@ namespace Tqdev\PhpCrudApi\Config {
             'driver' => null,
             'address' => null,
             'port' => null,
-            'username' => 'doctrine_blog',
-            'password' => 'doctrine_blog',
-            'database' => 'doctrine_blog',
+            'username' => '',
+            'password' => '',
+            'database' => '',
             'command' => '',
             'tables' => 'all',
             'mapping' => '',
@@ -4727,7 +4727,7 @@ namespace Tqdev\PhpCrudApi\Config {
             'dbAuth.registerUser' => 1,
             // 'apiKeyDbAuth.apiKeyColumn' => 'api_key',
             // 'apiKeyAuth.header' => '',
-            'apiKeyAuth.keys' => '2b85ee12ec385ce87fa2a243d6ad861c',
+            'apiKeyAuth.keys' => '',
             // 'authorization.tableHandler' => function ($operation, $tableName) {
             //     return $tableName != 'users';
             // },
