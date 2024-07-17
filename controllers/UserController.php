@@ -1,7 +1,9 @@
 <?php
-use DevCoder\DotEnv;
-include_once '../DotEnv.php';
-(new DotEnv(__DIR__.'/../.env'))->load();
+// use DevCoder\DotEnv;
+// include_once '../DotEnv.php';
+// (new DotEnv(__DIR__.'/../.env'))->load();
+
+// require_once '../koneksi.php';
 
 class UserController {
 	function getAll(string $paging) {

@@ -19,6 +19,11 @@ final class Users extends AbstractMigration
      */
     public function change(): void
     {
-
+        $users=$this->table('users');
+        $users->addColumn('username', 'string', ['limit'=>100])
+            ->addColumn('password', 'string', ['limit'=>100])
+            ->addColumn('api_key', 'string', ['null'=>true])
+            ->addIndex(['username'], ['unique'=>true])
+            ->create();
     }
 }
