@@ -10,9 +10,9 @@ services:
       - "8090:80"
     volumes:
       - ./:/var/www/html/
-    networks:
-      - backend
-      - frontend
+    # networks:
+    #   - backend
+    #   - frontend
   php:
     container_name: php-app
     expose: 
@@ -24,9 +24,9 @@ services:
       - ./:/var/www/html/
     env_file: 
       - './.env'
-    networks:
-      - backend
-      - frontend
+    # networks:
+    #   - backend
+    #   - frontend
   mysql:
     container_name: mysql-db
     image: mysql:latest
@@ -43,9 +43,9 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-    networks:
-      - backend
-      - frontend
+    # networks:
+    #   - backend
+    #   - frontend
   adminer:
     container_name: adminer-app
     image: adminer
@@ -54,9 +54,9 @@ services:
       - "8091:8080"
 volumes:
   db_php_proto_dev:
-networks:
-  backend:
-  frontend:
+# networks:
+#   backend:
+#   frontend:
 
 
 
