@@ -1,5 +1,5 @@
 <?php
-require_once '../koneksi.php';
+// require_once 'koneksi.php';
 function apiKey($url, $response=null) {
   $curl = curl_init($url);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
