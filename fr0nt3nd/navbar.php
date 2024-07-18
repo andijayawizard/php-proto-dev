@@ -13,7 +13,7 @@
           <a class="nav-link" href="<?=getenv('baseUrl')?>/users">Users</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?=$abs?>/blog">Blog</a>
+          <a class="nav-link" href="<?=$abs?>/brands">Brands</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

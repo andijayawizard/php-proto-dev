@@ -1,15 +1,14 @@
 <?php
 require_once 'controllers/function.php';
-require_once 'controllers/UserController.php';
-$items=new UserController();
+require_once 'controllers/BrandController.php';
+$items=new BrandController();
 $items=$items->getAll(1);
 ?>
 <table class="table" data-toggle="table">
   <thead>
     <tr>
       <th>#</th>
-      <th>Username</th>
-      <th>ApiKey</th>     
+      <th>Nama Brand</th>
     </tr>
   </thead>
   <tbody>
@@ -18,8 +17,7 @@ $items=$items->getAll(1);
     foreach ($items as $item) {?>
       <tr>
         <td><?=$no++?></td>
-        <td><?=$item['username']?></td>
-        <td><?=$item['api_key']?></td>
+        <td><?=$item['nama']?></td>
       </tr>
     <?php }?>
   </tbody>

@@ -1,10 +1,5 @@
 <?php
 require_once 'koneksi.php';
-require_once 'controllers/function.php';
-require_once 'controllers/UserController.php';
-$items=new UserController();
-$items=$items->getAll(1);
-
 ?>
 <!doctype html>
 <html lang="en">

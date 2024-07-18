@@ -2,14 +2,15 @@
 // $page=$_GET['page'];
 switch ($page) {
   case '':
-    require "home.php";
+    require "users.php";
     break;
-  case 'about':
-    require "aboutus.php";
+  case 'users':
+    if ($_GET['id'] || $_GET['seo']) require "users-detail.php";
+    else require "users.php";
     break;
-  case 'products':
-    if ($_GET['id'] || $_GET['seo']) require "products-detail.php";
-    else require "products.php";
+  case 'brands':
+    if ($_GET['id'] || $_GET['seo']) require "brands-detail.php";
+    else require "brands.php";
     break;
   case 'services':
     if ($_GET['id'] || $_GET['seo']) require "services-detail.php";
