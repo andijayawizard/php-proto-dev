@@ -1,7 +1,7 @@
 <?php
 require_once 'controllers/function.php';
-require_once 'controllers/UserController.php';
-$items=new UserController();
+require_once 'controllers/BlogController.php';
+$items=new BlogController();
 $items=$items->getAll(1);
 ?>
 <h1><?=$page?></h1>
@@ -9,8 +9,9 @@ $items=$items->getAll(1);
   <thead>
     <tr>
       <th>#</th>
-      <th>Username</th>
-      <th>ApiKey</th>     
+      <th>Judul</th>
+      <th>Ringkasan</th>
+      <th>Keterangan</th>
     </tr>
   </thead>
   <tbody>
@@ -19,8 +20,9 @@ $items=$items->getAll(1);
     foreach ($items as $item) {?>
       <tr>
         <td><?=$no++?></td>
-        <td><?=$item['username']?></td>
-        <td><?=$item['api_key']?></td>
+        <td><?=$item['nama']?></td>
+        <td><?=$item['rgks']?></td>
+        <td><?=$item['ktrg']?></td>
       </tr>
     <?php }?>
   </tbody>

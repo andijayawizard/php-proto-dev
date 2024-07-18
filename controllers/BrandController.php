@@ -1,10 +1,4 @@
 <?php
-// use DevCoder\DotEnv;
-// include_once '../DotEnv.php';
-// (new DotEnv(__DIR__.'/../.env'))->load();
-
-// require_once '../koneksi.php';
-
 class BrandController {
 	function getAll(string $paging) {
 		$url = getenv('baseUrl') . '/api/api.php/records/brands?page='.$paging.',10';

@@ -4,6 +4,7 @@ require_once 'controllers/BrandController.php';
 $items=new BrandController();
 $items=$items->getAll(1);
 ?>
+<h1><?=$page?></h1>
 <table class="table" data-toggle="table">
   <thead>
     <tr>
