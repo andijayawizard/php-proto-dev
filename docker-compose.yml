@@ -1,0 +1,62 @@
+version: "3"
+services:
+  apache:
+    container_name: apache-web-server
+    build: './apache/'
+    depends_on:
+      - php
+      - mysql
+    ports:
+      - "8090:80"
+    volumes:
+      - ./:/var/www/html/
+    networks:
+      - backend
+      - frontend
+  php:
+    container_name: php-app
+    expose: 
+      - 9000
+    links: 
+      - mysql
+    build: './php/'
+    volumes:
+      - ./:/var/www/html/
+    env_file: 
+      - './.env'
+    networks:
+      - backend
+      - frontend
+  mysql:
+    container_name: mysql-db
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - db_php_proto_dev:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    # environment:
+    #   - MYSQL_ROOT_PASSWORD=r00t
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    networks:
+      - backend
+      - frontend
+  adminer:
+    container_name: adminer-app
+    image: adminer
+    restart: always
+    ports:
+      - "8091:8080"
+volumes:
+  db_php_proto_dev:
+networks:
+  backend:
+  frontend:
+
+
+

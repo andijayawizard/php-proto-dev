@@ -23,4 +23,4 @@ class Koneksi
 // define('DB_CHARACSET', 'utf8');
 
 $abs = getenv('baseUrl');
-error_reporting(1);
+error_reporting(0);
