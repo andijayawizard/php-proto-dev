@@ -9,20 +9,14 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="<?=$abs?>">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?=getenv('baseUrl')?>/about-us">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?=$abs?>/contact-us">Contact Us</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="<?=$abs?>/users">Users</a></li>
-            <li><a class="dropdown-item" href="<?=$abs?>/brands">Brands</a></li>
-            <li><a class="dropdown-item" href="<?=$abs?>/blog">Blog</a></li>
+            <li><a class="dropdown-item" href="<?=$abs?>/back3nd/users">Users</a></li>
+            <li><a class="dropdown-item" href="<?=$abs?>/back3nd/brands">Brands</a></li>
+            <li><a class="dropdown-item" href="<?=$abs?>/back3nd/blog">Blog</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="<?=$abs?>/back3nd">Login</a></li>
           </ul>
