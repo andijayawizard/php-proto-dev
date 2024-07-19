@@ -21,8 +21,8 @@
   <body>
     <div class="container-fluid">
       <?php
-      require_once 'navbar.php';
-      require_once 'contents.php';
+          require_once 'navbar.php';
+          require_once 'contents.php';
       ?>
     </div>    
 

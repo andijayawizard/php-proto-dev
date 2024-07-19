@@ -2,7 +2,7 @@
 $page=$uri_exp[3];
 switch ($page) {
   case '':
-    require "users.php";
+    require "login.php";
     break;
   case 'users':
     if (isset($_GET['id'])) require "users-detail.php";
