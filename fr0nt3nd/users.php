@@ -1,10 +1,13 @@
 <?php
 require_once 'controllers/function.php';
 require_once 'controllers/UserController.php';
+require_once 'controllers/SiteController.php';
 $items=new UserController();
 $items=$items->getAll(1);
+
+$users=new SiteController();
 ?>
-<h1><?=$page?></h1>
+<h1><?=$users->users()?></h1>
 <table class="table" data-toggle="table">
   <thead>
     <tr>

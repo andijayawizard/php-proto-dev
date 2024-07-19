@@ -3,10 +3,19 @@ class SiteController {
 	public function home() { 
 		echo "Home page!"; 
 	}
-	public function about() { 
-		echo "About page!"; 
+	public function aboutUs() { 
+		return "About Us";
 	} 
-	public function contact() { 
-		echo "Contact Us page!"; 
+	public function contactUs() { 
+		return "Contact Us";
 	} 
+	public function users() {
+		return "Users";
+	}
+	public function brands() {
+		return "Brands";
+	}
+	public function blog() {
+		return "Blog";
+	}
 } 

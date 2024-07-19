@@ -1,6 +1,5 @@
 <?php
 session_start();
-require_once '../koneksi.php';
 $url=$abs;
 
 // $url = "https://bootstrapfriendly.com/demo/live-demo/CRUD-operations-with-PHP-cURl-REST-API_1649791942/live/index.php?token=ABDSC144DSD";

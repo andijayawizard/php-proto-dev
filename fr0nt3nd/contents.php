@@ -28,10 +28,10 @@ switch ($page) {
     if (isset($_GET['id'])) require "blog-detail.php";
     else require "blog.php";
     break;
-  case 'about':
+  case 'about-us':
     require "about.php";
     break;
-  case 'contact':
+  case 'contact-us':
     require "contact.php";
     break;
   case 'search':

@@ -20,10 +20,10 @@ require_once 'routes.php';
   </head>
   <body>
     <div class="container-fluid">
-    <?php
-    require_once 'fr0nt3nd/navbar.php';
-    // require_once 'fr0nt3nd/contents.php';
-    ?>
+      <?php
+      require_once 'fr0nt3nd/navbar.php';
+      require_once 'fr0nt3nd/contents.php';
+      ?>
     </div>    
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
