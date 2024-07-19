@@ -1,5 +1,6 @@
 <?php
-require_once 'koneksi.php';
+require_once 'controllers/Koneksi.php';
+require_once 'routes.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -21,7 +22,7 @@ require_once 'koneksi.php';
     <div class="container-fluid">
     <?php
     require_once 'fr0nt3nd/navbar.php';
-    require_once 'fr0nt3nd/contents.php';
+    // require_once 'fr0nt3nd/contents.php';
     ?>
     </div>    
 

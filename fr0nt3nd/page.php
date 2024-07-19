@@ -6,9 +6,9 @@
 $uri=$_SERVER['REQUEST_URI'];
 $uri_exp=explode('/', $uri);
 
-if ($uri_exp[2]) {
-  $page=$uri_exp[2];
-}
+$page=$uri_exp[2];
+if (isset($_GET['id'])) $id=$uri_exp[3];
+if (isset($_GET['paging'])) $paging=$uri_exp[3];
 
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 // $result = json_decode(apiKey($abs.'/api/api.php/records/'.$page.'/'.$id), true);
@@ -45,7 +45,7 @@ switch ($page) {
     $title = 'Projects';
     break;
   case 'blog':
-    if ($_GET['id']) {
+    if (isset($_GET['id'])) {
       $subTitle = $result['nama'];
     }
     $title = 'Blog';

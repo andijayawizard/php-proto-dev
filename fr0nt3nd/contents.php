@@ -5,11 +5,11 @@ switch ($page) {
     require "users.php";
     break;
   case 'users':
-    if ($_GET['id'] || $_GET['seo']) require "users-detail.php";
+    if (isset($_GET['id'])) require "users-detail.php";
     else require "users.php";
     break;
   case 'brands':
-    if ($_GET['id'] || $_GET['seo']) require "brands-detail.php";
+    if (isset($_GET['id'])) require "brands-detail.php";
     else require "brands.php";
     break;
   case 'services':
@@ -25,11 +25,14 @@ switch ($page) {
     else require "projects.php";
     break;
   case 'blog':
-    if ($_GET['id'] || $_GET['seo']) require "blog-detail.php";
+    if (isset($_GET['id'])) require "blog-detail.php";
     else require "blog.php";
     break;
+  case 'about':
+    require "about.php";
+    break;
   case 'contact':
-    require "contactus.php";
+    require "contact.php";
     break;
   case 'search':
     require "search.php";
