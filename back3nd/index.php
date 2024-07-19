@@ -1,12 +1,13 @@
 <?php
-// require_once 'controllers/Koneksi.php';
+// require_once '../controllers/Koneksi.php';
+// require_once '../controllers/AuthController.php';
 // require_once 'routes.php';
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
   <head>
     <?php
-        require_once 'page.php';
+    require_once 'page.php';
     ?>
     <!-- Required meta tags -->
     <meta charset="utf-8">
