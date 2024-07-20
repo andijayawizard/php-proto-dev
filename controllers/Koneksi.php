@@ -1,7 +1,7 @@
 <?php
-use DevCoder\DotEnv;
-include_once 'DotEnv.php';
-(new DotEnv(__DIR__.'/.env'))->load();
+// use DevCoder\DotEnv;
+// include_once 'DotEnv.php';
+// (new DotEnv(__DIR__.'/.env'))->load();
 // $dotEnv=new DotEnv('.env');
 // $dotEnv->load();
 

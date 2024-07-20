@@ -1,7 +1,4 @@
 <?php
-// require_once '../controllers/Koneksi.php';
-// require_once '../controllers/AuthController.php';
-// require_once 'routes.php';
 if (!empty($_SESSION)) {
 } else {
   session_start();
