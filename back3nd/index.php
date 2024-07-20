@@ -6,29 +6,80 @@ if (!empty($_SESSION)) {
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
-  <head>
-    <?php
-    require_once 'page.php';
-    ?>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>FrontEnd</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<?php include "head.php"; ?>
+<?php
+      // if (isset($_SESSION['ADMIN'])) require_once 'components/navbar.php';
+?>
+<?php if (isset($_SESSION['ADMIN'])) { ?>
 
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.23.1/dist/bootstrap-table.min.css"> -->
-  </head>
-  <body>
-    <div class="container-fluid">
+  <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed text-sm">
+    <div class="wrapper">
+      <!-- Navbar -->
+      <?php include "components/navbar.php"; ?>
+      <!-- /.navbar -->
+
+      <!-- Main Sidebar Container -->
       <?php
-      if (isset($_SESSION['ADMIN'])) require_once 'navbar.php';
-      require_once 'contents.php';
-      ?>
-    </div>    
+        if (!empty($_SESSION['ADMIN'])) {
+          include "components/aside-su.php";
+        // } elseif (!empty($_SESSION['ADMIN']) && $sesi['role_id'] == 2) {
+        //   include "../layouts/aside-manager.php";
+        // } elseif (!empty($_SESSION['ADMIN']) && $sesi['role_id'] == 3) {
+        //   include "../layouts/aside-supervisor.php";
+        // } elseif (!empty($_SESSION['ADMIN']) && $sesi['role_id'] == 4) {
+        //   include "../layouts/aside-warehouse.php";
+        // } elseif (!empty($_SESSION['ADMIN']) && $sesi['role_id'] == 5) {
+        //   include "../layouts/aside-accounting.php";
+        // } elseif (!empty($_SESSION['ADMIN']) && $sesi['role_id'] == 7) {
+        //   include "../layouts/aside-guest.php";
+        // } elseif (!empty($_SESSION['ADMIN']) && $sesi['role_id'] == 8) {
+        //   include "../layouts/aside-author.php";
+        } else {
+          echo "no page found";
+        }
+        ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <?php // include "components/header.php"; ?>
+        <!-- /.content-header -->
 
+        <!-- Main content -->
+        <section class="content">
+          <div id="load"></div>
+          <?php include "contents.php"; ?>
+          <!--/. container-fluid -->
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+
+      <!-- Main Footer -->
+      <?php include "components/footer.php"; ?>
+    </div>
+    <!-- ./wrapper -->
+
+    <?php include "scripts.php"; ?>
   </body>
+<?php } else {?>
+  <body class="hold-transition login-page dark-mode">
+    <?php require_once 'login.php';?>
+  </body>
+  <!-- <div class="container">
+    <br />
+    <div class="alert alert-info">
+      <h3>Restricted Area</h3>
+      <hr />
+      <p><a href="<?= $abs; ?>/back3nd/">Please login here</a></p>
+    </div>
+  </div> -->
+<?php } ?>
 </html>
+
