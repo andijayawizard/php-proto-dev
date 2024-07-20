@@ -25,7 +25,7 @@ switch ($page) {
     else require "projects.php";
     break;
   case 'blog':
-    if (isset($_GET['id'])) require "blog-detail.php";
+    if (isset($uri_exp[4])) require "blog-detail.php";
     else require "blog.php";
     break;
   case 'about-us':

@@ -22,7 +22,9 @@ if (!empty($_SESSION['ADMIN'])) {?>
         foreach ($items as $item) {?>
           <tr>
             <td><?=$no++?></td>
-            <td><?=$item['nama']?></td>
+            <td>
+              <a href="<?=$abs?>/back3nd/blog/<?=$item['id']?>"><?=$item['nama']?></a>
+            </td>
             <td><?=$item['rgks']?></td>
             <td><?=$item['ktrg']?></td>
           </tr>
