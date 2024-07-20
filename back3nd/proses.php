@@ -5,13 +5,6 @@ $koneksi = new Koneksi();
 $koneksi = $koneksi->DBConnect();
 $proses=new AuthController($koneksi);
 
-if (isset($_SESSION['ADMIN']['id'])) {
-	$id = $_SESSION['ADMIN']['id'];
-}
-// $id = $_SESSION['ADMIN']['id'] ? $_SESSION['ADMIN']['id'] : 'no user';
-$sesi = $proses->tampil_data_id('users', 'id', $id);
-// $level = $proses->tampil_data_id('roles', 'id', $sesi['role_id']);
-
 if (!empty($_GET['aksi'] == 'login')) {
 	// validasi text untuk filter karakter khusus dengan fungsi strip_tags()
 	$user = strip_tags($_POST['username']);
@@ -32,5 +25,10 @@ if (!empty($_GET['aksi'] == 'login')) {
 		// header('location: ' . $abs . '/back3nd/index.php?get=' . urlencode('auth-failed'));
 		header('location: ' . $abs . '/back3nd/');
 	}
+}
+if ($_GET['aksi']=='logout') {
+	session_start();
+	session_destroy();
+	header("location: ".$abs."/back3nd/");
 }
 ?>

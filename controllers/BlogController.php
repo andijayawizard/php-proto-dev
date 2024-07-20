@@ -7,7 +7,7 @@ class BlogController {
 	    return $items;
 	}
 	function getDetails(string $id) {
-		$url = getenv('baseUrl') . '/api/api.php/records/users/'.$id.'?join=user&exclude=user.password';
+		$url = getenv('baseUrl') . '/api/api.php/records/blogs/'.$id;
 		$detail = json_decode(apiKey($url), true);		
 		return $detail;
 	}

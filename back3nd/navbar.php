@@ -1,7 +1,10 @@
 <nav class="navbar navbar-expand-lg bg-light--">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Admin Dashboard</a>
-    <?//=$_SESSION['ADMIN']['id']?>
+    <a class="navbar-brand" href="#">
+      <?php
+      if (isset($_SESSION['ADMIN'])) echo "Welcome ".$_SESSION['ADMIN']['username'];
+      ?>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,7 +22,7 @@
             <li><a class="dropdown-item" href="<?=$abs?>/back3nd/brands">Brands</a></li>
             <li><a class="dropdown-item" href="<?=$abs?>/back3nd/blog">Blog</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?=$abs?>/back3nd/logout.php">Logout</a></li>
+            <li><a class="dropdown-item" href="<?=$abs?>/back3nd/proses.php?aksi=logout">Logout</a></li>
           </ul>
         </li>
         <li class="nav-item">

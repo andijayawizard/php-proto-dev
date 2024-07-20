@@ -2,6 +2,10 @@
 // require_once '../controllers/Koneksi.php';
 // require_once '../controllers/AuthController.php';
 // require_once 'routes.php';
+if (!empty($_SESSION)) {
+} else {
+  session_start();
+}
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
@@ -22,7 +26,7 @@
   <body>
     <div class="container-fluid">
       <?php
-      require_once 'navbar.php';
+      if (isset($_SESSION['ADMIN'])) require_once 'navbar.php';
       require_once 'contents.php';
       ?>
     </div>    

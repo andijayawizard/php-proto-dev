@@ -20,7 +20,9 @@ $items=$items->getAll(1);
     foreach ($items as $item) {?>
       <tr>
         <td><?=$no++?></td>
-        <td><?=$item['nama']?></td>
+        <td>
+          <a href="<?=$abs?>/blog/<?=$item['id']?>/<?=$item['slug']?>"><?=$item['nama']?></a>
+        </td>
         <td><?=$item['rgks']?></td>
         <td><?=$item['ktrg']?></td>
       </tr>
