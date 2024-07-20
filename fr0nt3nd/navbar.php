@@ -24,7 +24,7 @@
             <li><a class="dropdown-item" href="<?=$abs?>/brands">Brands</a></li>
             <li><a class="dropdown-item" href="<?=$abs?>/blog">Blog</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?=$abs?>/back3nd">Login</a></li>
+            <li><a class="dropdown-item" href="<?=$abs?>/back3nd/">Login</a></li>
           </ul>
         </li>
         <li class="nav-item">

@@ -1,7 +1,3 @@
-<?php
-// require_once 'controllers/Koneksi.php';
-// require_once 'routes.php';
-?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
   <head>

@@ -1,5 +1,5 @@
 <?php
-require_once 'controllers/Koneksi.php';
+require_once 'Koneksi.php';
 require_once 'routes.php';
 $uri=$_SERVER['REQUEST_URI'];
 $uri_exp=explode('/', $uri);

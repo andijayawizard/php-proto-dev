@@ -16,4 +16,9 @@ class AuthController {
 			return 'gagal';
 		}
 	}
+	function tampil_data_id($tabel, $where, $id) {
+		$row = $this->db->prepare("SELECT * FROM $tabel WHERE $where = ?");
+		$row->execute(array($id));
+		return $hasil = $row->fetch();
+	}
 }
