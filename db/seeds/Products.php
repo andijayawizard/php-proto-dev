@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Phinx\Seed\AbstractSeed;
 
-class Brands extends AbstractSeed
+class Products extends AbstractSeed
 {
     /**
      * Run Method.
@@ -17,14 +17,10 @@ class Brands extends AbstractSeed
     public function run(): void
     {
         $data = array(
-            array(
-                'nama'=>'sika'
-            ),
-            array(
-                'nama'=>'bitushield'
-            ),
+            array('nama'=>'membran bakar morillo'),
+            array('nama'=>'koster pelapis anti bocor'),
         );
-        $brands=$this->table('brands');
-        $brands->insert($data)->save();
+        $products=$this->table('products');
+        $products->insert($data)->save();
     }
 }

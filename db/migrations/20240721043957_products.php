@@ -20,16 +20,17 @@ final class Products extends AbstractMigration
     public function change(): void
     {
         $products=$this->table('products');
-        $products->addColumn('nama', 'string', ['limit'=>100])
-            // ->addColumn('brand_id', 'integer')
-            ->addColumn('slug', 'string', ['limit'=>100])
+        $products->addColumn('brand_id', 'integer', ['signed'=>false])
+            ->addColumn('nama', 'string')
+            ->addColumn('slug', 'string')
             ->addColumn('rgks', 'text')
             ->addColumn('ktrg', 'text')
-            ->addColumn('acak', 'string', ['limit'=>100])
-            ->addColumn('pub', 'integer')
+            ->addColumn('acak', 'string', ['limit'=>50])
+            ->addColumn('pub', 'boolean')
             ->addTimestampsWithTimezone()
-            ->addIndex(['nama'], ['unique'=>true])
-            // ->addForeignKey('brand_id', 'brands', 'id')
+            ->addIndex('nama', ['unique'=>true])
+            ->addForeignKey('brand_id', 'brands', 'id', ['update'=>'NO_ACTION', 'delete'=>'NO_ACTION'])
             ->create();
+
     }
 }

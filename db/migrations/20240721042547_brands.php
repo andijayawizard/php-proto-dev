@@ -21,13 +21,11 @@ final class Brands extends AbstractMigration
     {
         $brands=$this->table('brands');
         $brands->addColumn('nama', 'string', ['limit'=>100])
-            ->addColumn('slug', 'string', ['limit'=>100])
+            ->addColumn('slug', 'string')
             ->addColumn('rgks', 'text')
             ->addColumn('ktrg', 'text')
-            ->addColumn('acak', 'string', ['limit'=>100])
-            ->addColumn('pub', 'integer')
             ->addTimestampsWithTimezone()
-            ->addIndex(['nama'], ['unique'=>true])
+            ->addIndex('nama', ['unique'=>true])
             ->create();
     }
 }

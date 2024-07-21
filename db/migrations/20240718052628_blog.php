@@ -20,7 +20,8 @@ final class Blog extends AbstractMigration
     public function change(): void
     {
         $blog=$this->table('blogs');
-        $blog->addColumn('nama', 'string', ['limit'=>100])
+        $blog->addColumn('user_id', 'integer', ['null'=>true, 'signed'=>false])
+            ->addColumn('nama', 'string', ['limit'=>100])
             ->addColumn('slug', 'string')
             ->addColumn('rgks', 'text')
             ->addColumn('ktrg', 'text')
@@ -28,6 +29,7 @@ final class Blog extends AbstractMigration
             ->addColumn('pub', 'integer')
             ->addTimestampsWithTimezone()
             ->addIndex(['nama'], ['unique'=>true])
+            ->addForeignKey('user_id', 'users', 'id', ['update'=>'NO_ACTION', 'delete'=>'NO_ACTION'])
             ->create();
     }
 }

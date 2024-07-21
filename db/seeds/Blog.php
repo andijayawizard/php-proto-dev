@@ -18,12 +18,12 @@ class Blog extends AbstractSeed
     {
         $data = array(
             array(
-                'nama'=>'judul',
+                'nama'=>'membikin kue cucur',
                 'rgks'=>'ringkasan',
                 'ktrg'=>'keterangan'
             ),
             array(
-                'nama'=>'title',
+                'nama'=>'membuat kue nastar',
                 'rgks'=>'summary',
                 'ktrg'=>'details'
             ),

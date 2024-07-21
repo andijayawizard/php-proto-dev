@@ -1,5 +1,8 @@
 <?php
-require_once 'koneksi.php';
+use DevCoder\DotEnv;
+include_once 'controllers/DotEnv.php';
+(new DotEnv(__DIR__.'/.env'))->load();
+require_once 'controllers/Koneksi.php';
 
 return
 [
