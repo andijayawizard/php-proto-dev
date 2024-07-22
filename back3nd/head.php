@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title><?=$misc['nama'];?> / <?= $data['title']; ?></title>
+  <title><?=isset($misc['nama'])?> / <?=isset($data['title'])?></title>
   <link rel="shortcut icon" href="<?= $abs; ?>/assets/favicon.png">
   <!-- DataTables -->
   <link rel="stylesheet" href="<?= $abs; ?>/vendor/almasaeed2010/adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">

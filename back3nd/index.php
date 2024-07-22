@@ -7,11 +7,7 @@ if (!empty($_SESSION)) {
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
 <?php include "head.php"; ?>
-<?php
-      // if (isset($_SESSION['ADMIN'])) require_once 'components/navbar.php';
-?>
 <?php if (isset($_SESSION['ADMIN'])) { ?>
-
   <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed text-sm">
     <div class="wrapper">
       <!-- Navbar -->

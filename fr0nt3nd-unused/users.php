@@ -1,7 +1,7 @@
 <?php
-require_once 'controllers/function.php';
-require_once 'controllers/UserController.php';
-require_once 'controllers/SiteController.php';
+require_once 'src/Controllers/function.php';
+require_once 'src/Controllers/UserController.php';
+require_once 'src/Controllers/SiteController.php';
 $items=new UserController();
 $items=$items->getAll(1);
 

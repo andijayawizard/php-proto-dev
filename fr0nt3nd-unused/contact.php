@@ -1,5 +1,5 @@
 <?php
-require_once 'controllers/SiteController.php';
+require_once 'src/Controllers/SiteController.php';
 $contact=new SiteController();
 ?>
 

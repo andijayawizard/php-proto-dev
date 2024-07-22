@@ -1,11 +1,11 @@
 <?php
 use DevCoder\DotEnv;
-include_once '../controllers/DotEnv.php';
+include_once '../src/Controllers/DotEnv.php';
 $dotEnv=new DotEnv('../.env');
 $dotEnv->load();
 
-require_once '../controllers/Koneksi.php';
-require_once '../controllers/AuthController.php';
+require_once '../src/Controllers/Koneksi.php';
+require_once '../src/Controllers/AuthController.php';
 $koneksi = new Koneksi();
 $koneksi = $koneksi->DBConnect();
 $proses=new AuthController($koneksi);

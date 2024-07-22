@@ -1,19 +1,23 @@
 <?php
 use DevCoder\DotEnv;
-include_once 'controllers/DotEnv.php';
+include_once 'src/Controllers/DotEnv.php';
 (new DotEnv(__DIR__.'/.env'))->load();
 
-require_once 'controllers/Koneksi.php';
-require_once 'routes.php';
+// require_once 'vendor/autoload.php';
+// require_once 'src/Routes/index.php';
+
+require_once 'src/Controllers/Koneksi.php';
+require_once 'src/Routes/index.php';
+
 $uri=$_SERVER['REQUEST_URI'];
 $uri_exp=explode('/', $uri);
 $page=$uri_exp[2];
 switch ($page) {
   case 'back3nd':
-    require_once 'back3nd/index.php';
+    require_once 'src/Views/back3nd/index.php';
     break;
   
   default:
-    require_once 'fr0nt3nd/index.php';
+    require_once 'src/Views/fr0nt3nd/index.php';
     break;
 }
