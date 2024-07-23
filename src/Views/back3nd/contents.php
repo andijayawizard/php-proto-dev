@@ -1,7 +1,8 @@
 <?php
+$page=$uri_exp[3];
 switch ($page) {
   case '':
-    require "users.php";
+    require "layout-login.php";
     break;
   case 'users':
     if (isset($_GET['id'])) require "users-detail.php";
@@ -24,9 +25,7 @@ switch ($page) {
     else require "projects.php";
     break;
   case 'blog':
-    if (isset($uri_exp[3])) {
-      require "blog-detail.php";
-    } 
+    if (isset($uri_exp[4])) require "blog-detail.php";
     else require "blog.php";
     break;
   case 'about-us':

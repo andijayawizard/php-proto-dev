@@ -5,8 +5,8 @@
 // echo "PHP_SELF: ".$_SERVER['PHP_SELF'];
 $uri=$_SERVER['REQUEST_URI'];
 $uri_exp=explode('/', $uri);
+$page = (isset($uri_exp[2])) ? $page=$uri_exp[2] : $page='' ;
 
-$page=isset($uri_exp[2]);
 if (isset($_GET['id'])) $id=$uri_exp[3];
 if (isset($_GET['paging'])) $paging=$uri_exp[3];
 

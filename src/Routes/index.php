@@ -18,10 +18,10 @@
 
 // $router->dispatch();
 
-// use App\Controllers\Router;
-// use App\Controllers\SiteController;
-require_once 'src/Controllers/Router.php';
-require_once 'src/Controllers/SiteController.php';
+use App\Router;
+use App\Controllers\SiteController;
+// require_once 'src/Router.php';
+// require_once 'src/Controllers/SiteController.php';
 $router = new Router();
 $router->add('GET', '/', [SiteController::class, 'home']); 
 $router->add('GET', '/about-us', [SiteController::class, 'aboutUs']); 

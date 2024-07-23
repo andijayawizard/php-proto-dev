@@ -38,7 +38,7 @@
           <span class="float-right text-muted text-sm badge badge-success"><?=isset($level['nama'])?></span>
         </a>
         <div class="dropdown-divider"></div>
-        <a href="<?= $abs; ?>/back3nd/proses.php?aksi=logout" class="dropdown-item">
+        <a href="<?= $abs; ?>/src/Views/back3nd/proses.php?aksi=logout" class="dropdown-item">
           <i class="fas fa-sign-out-alt mr-2"></i> Logout
           <span class="float-right text-muted text-sm">end session</span>
         </a>

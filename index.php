@@ -7,7 +7,7 @@ include_once 'src/Controllers/DotEnv.php';
 // require_once 'src/Routes/index.php';
 
 require_once 'src/Controllers/Koneksi.php';
-require_once 'src/Routes/index.php';
+// require_once 'src/Routes/index.php';
 
 $uri=$_SERVER['REQUEST_URI'];
 $uri_exp=explode('/', $uri);
@@ -18,6 +18,6 @@ switch ($page) {
     break;
   
   default:
-    require_once 'src/Views/fr0nt3nd/index.php';
+    require_once 'fr0nt3nd/index.php';
     break;
 }

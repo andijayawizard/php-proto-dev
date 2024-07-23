@@ -1,15 +1,16 @@
 <?php
-namespace App\Controllers;
-use App\Controller;
+// namespace App\Controller;
+// use App\Controller;
 
-class UserController extends Controller {
+// class UserController extends Controller {
+class UserController {
 	public function index($value='')
 	{
 		$title='Users';
 		$items=$this->getAll(1);
 		$this->render('fr0nt3nd/users', ['items'=>$items, 'title'=>$title]);
 	}
-	private function getAll(string $paging) {
+	public function getAll(string $paging) {
 		$url = getenv('baseUrl') . '/api/api.php/records/users?page='.$paging.',10';
 	    $array = json_decode(apiKey($url), true);
 	    $items = isset($array['records']) ? $array['records'] : array();		

@@ -26,7 +26,7 @@ if (!$_SESSION['ADMIN']) {
         <!-- <img src="<?= $img_profile; ?>" class="img-circle elevation-2" alt="<?= $sesi['username']; ?>"> -->
       </div>
       <div class="info">
-        <a href="#" class="d-block"><?php echo $_SESSION['ADMIN']['username']; ?></a>
+        <a href="#" class="d-block">Welcome, <?php echo $_SESSION['ADMIN']['username']; ?></a>
       </div>
     </div>
 

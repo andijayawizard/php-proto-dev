@@ -6,7 +6,7 @@
 $uri=$_SERVER['REQUEST_URI'];
 $uri_exp=explode('/', $uri);
 
-$page=$uri_exp[2];
+$page=$uri_exp[3];
 if (isset($_GET['id'])) $id=$uri_exp[3];
 if (isset($_GET['paging'])) $paging=$uri_exp[3];
 
