@@ -1,5 +1,7 @@
 <?php
 require_once 'ApiKey.php';
+// namespace App\Controllers;
+// use App\Controller\ApiKey;
 
 class BlogController {
 	public function getAll(string $paging) {
