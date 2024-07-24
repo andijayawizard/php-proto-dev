@@ -18,6 +18,6 @@ switch ($page) {
     break;
   
   default:
-    require_once 'fr0nt3nd/index.php';
+    require_once 'src/Views/fr0nt3nd/index.php';
     break;
 }

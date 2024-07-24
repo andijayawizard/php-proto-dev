@@ -1,8 +1,12 @@
 <?php
+require_once 'ApiKey.php';
+
 class BrandController {
 	function getAll(string $paging) {
 		$url = getenv('baseUrl') . '/api/api.php/records/brands?page='.$paging.',10';
-	    $array = json_decode(apiKey($url), true);
+		$apiKey=new ApiKey();
+		$apiKey=$apiKey->apiKey($url);
+	    $array = json_decode($apiKey, true);
 	    $items = isset($array['records']) ? $array['records'] : array();		
 	    return $items;
 	}

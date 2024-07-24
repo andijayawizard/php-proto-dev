@@ -1,5 +1,4 @@
 <?php
-require_once 'src/Controllers/function.php';
 require_once 'src/Controllers/UserController.php';
 $items=new UserController();
 $items=$items->getAll(1);

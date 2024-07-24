@@ -1,5 +1,4 @@
 <?php
-require_once 'src/Controllers/function.php';
 require_once 'src/Controllers/BrandController.php';
 $items=new BrandController();
 $items=$items->getAll(1);

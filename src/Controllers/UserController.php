@@ -1,6 +1,8 @@
 <?php
-// namespace App\Controller;
+// namespace App\Controllers\ApiKey;
 // use App\Controller;
+// use App\Controllers\ApiKey;
+require_once 'ApiKey.php';
 
 // class UserController extends Controller {
 class UserController {
@@ -12,11 +14,13 @@ class UserController {
 	}
 	public function getAll(string $paging) {
 		$url = getenv('baseUrl') . '/api/api.php/records/users?page='.$paging.',10';
-	    $array = json_decode(apiKey($url), true);
+		$apiKey=new ApiKey();
+		$apiKey=$apiKey->apiKey($url);
+	    $array = json_decode($apiKey, true);
 	    $items = isset($array['records']) ? $array['records'] : array();		
 	    return $items;
 	}
-	function getDetails(string $id) {
+	public function getDetails(string $id) {
 		$url = getenv('baseUrl') . '/api/api.php/records/users/'.$id.'?join=user&exclude=user.password';
 		$detail = json_decode(apiKey($url), true);		
 		return $detail;
@@ -26,17 +30,5 @@ class UserController {
 	    $array = json_decode(apiKey($url), true);
 	    $items = isset($array['records']) ? $array['records'] : array();		
 	    return $items;
-	}
-	private function apiKey($url, $response=null) {
-	  $curl = curl_init($url);
-	  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-	  curl_setopt($curl, CURLOPT_HTTPHEADER, [
-	    'X-API-Key: '.getenv('apiKey'),
-	    'Content-Type: application/json'
-	  ]);
-	  $response = curl_exec($curl);
-	  curl_close($curl);
-	  // echo $response . PHP_EOL;  
-	  return $response;
 	}
 }

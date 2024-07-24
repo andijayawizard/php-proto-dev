@@ -1,5 +1,4 @@
 <?php
-require_once 'src/Controllers/function.php';
 require_once 'src/Controllers/BlogController.php';
 $items=new BlogController();
 $items=$items->getAll(1);

@@ -1,14 +1,18 @@
 <?php
+require_once 'ApiKey.php';
+
 class BlogController {
-	function getAll(string $paging) {
+	public function getAll(string $paging) {
 		$url = getenv('baseUrl') . '/api/api.php/records/blogs?page='.$paging.',10';
-	    $array = json_decode(apiKey($url), true);
+		$apiKey=new ApiKey();
+	    $array = json_decode($apiKey->apiKey($url), true);
 	    $items = isset($array['records']) ? $array['records'] : array();		
 	    return $items;
 	}
-	function getDetails(string $id) {
+	public function getDetails(string $id) {
 		$url = getenv('baseUrl') . '/api/api.php/records/blogs/'.$id;
-		$detail = json_decode(apiKey($url), true);		
+		$apiKey=new ApiKey();
+		$detail = json_decode($apiKey->apiKey($url), true);		
 		return $detail;
 	}
 	public function getSize(int $size) {
