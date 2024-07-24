@@ -4,8 +4,8 @@ namespace App;
 
 class Router
 {
-    // private array $routes = [];
-    protected $routes = [];
+    private array $routes = [];
+    // protected $routes = [];
     // private function addRoute($route, $controller, $action, $method)
     // {
     //     $this->routes[$method][$route] = ['controller' => $controller, 'action' => $action];

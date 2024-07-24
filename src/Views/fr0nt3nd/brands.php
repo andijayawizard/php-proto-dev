@@ -4,7 +4,7 @@ $items=new BrandController();
 $items=$items->getAll(1);
 ?>
 <h1><?=$page?></h1>
-<table class="table" data-toggle="table">
+<table id="example" class="table table-striped" style="width:100%">
   <thead>
     <tr>
       <th>#</th>

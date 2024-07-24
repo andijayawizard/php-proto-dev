@@ -15,7 +15,7 @@ if (!empty($_SESSION['ADMIN'])) {?>
         <div class="card">
           <div class="card-header">
             <h3 class="card-title">
-              <a href="<?= $abs; ?>/backend/pages/index.php?page=<?= $page; ?>&act=tambah" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> <?=$page?></a>
+              <a href="<?=$abs?>/back3nd/blog/add" class="btn btn-success btn-sm"><span class="fa fa-plus"></span> <?=$page?></a>
 
               <!-- <button type="button" id="btn-tambah" class="btn btn-default btn-sm openModalEdit'.$value->id.'"
               data-toggle="modal" data-target="#myModalDetail'.$value->id.'"
