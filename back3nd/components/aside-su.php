@@ -5,8 +5,8 @@ if (!$_SESSION['ADMIN']) {
 } else { ?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
-  <a href="<?= $abs; ?>" class="brand-link" target="_blank">
-    <img src="<?= $abs; ?>/assets/logo-alt.png" alt="Morillo Logo" class="brand-image img-circle elevation-3"
+  <a href="<?= getenv('baseUrl'); ?>" class="brand-link" target="_blank">
+    <img src="<?= getenv('baseUrl'); ?>/assets/logo-alt.png" alt="Morillo Logo" class="brand-image img-circle elevation-3"
       style="opacity: .8">
     <span class="brand-text font-weight-light"><?=isset($misc['nama'])?></span>
   </a>
@@ -18,9 +18,9 @@ if (!$_SESSION['ADMIN']) {
       <div class="image">
         <?php
           // if ($img_profile) {
-          //   $img_profile = $abs . "/assets/uploads/images/user/" . $sesi['acak'] . "-1.jpg";
+          //   $img_profile = getenv('baseUrl') . "/assets/uploads/images/user/" . $sesi['acak'] . "-1.jpg";
           // } else {
-          //   $img_profile = $abs . "/assets/logo-alt.png";
+          //   $img_profile = getenv('baseUrl') . "/assets/logo-alt.png";
           // }
           ?>
         <!-- <img src="<?= $img_profile; ?>" class="img-circle elevation-2" alt="<?= $sesi['username']; ?>"> -->
@@ -65,7 +65,7 @@ if (!$_SESSION['ADMIN']) {
                   // $menu=$proses->tampil_data_specified('*', 'menu', "pub=1 and subcat_id='$menusubcat[id]'");
                   // foreach ($menu as $menu) {?>
                     <!-- <li class="nav-item">
-                      <a id="#" href="<?= $abs; ?>/backend/pages/index.php?page=<?=$menu['link']?>" class="nav-link">
+                      <a id="#" href="<?= getenv('baseUrl'); ?>/backend/pages/index.php?page=<?=$menu['link']?>" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p><?=$menu['caption']?></p>
                       </a>
@@ -79,26 +79,26 @@ if (!$_SESSION['ADMIN']) {
             // $menu=$proses->tampil_data_specified('*', 'menu', "pub=1 and subcat_id is null");
             // foreach ($menu as $menu) {?>
               <!-- <li class="nav-item">
-                <a id="#" href="<?= $abs; ?>/backend/pages/index.php?page=<?=$menu['link']?>" class="nav-link">
+                <a id="#" href="<?= getenv('baseUrl'); ?>/backend/pages/index.php?page=<?=$menu['link']?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p><?=$menu['caption']?></p>
                 </a>
               </li> -->
             <?php // }?>
             <li class="nav-item">
-              <a id="#" href="<?=$abs?>/back3nd/users" class="nav-link">
+              <a id="#" href="<?=getenv('baseUrl')?>/back3nd/users" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Users</p>
               </a>
             </li>
             <li class="nav-item">
-              <a id="#" href="<?=$abs?>/back3nd/brands" class="nav-link">
+              <a id="#" href="<?=getenv('baseUrl')?>/back3nd/brands" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Brands</p>
               </a>
             </li>
             <li class="nav-item">
-              <a id="#" href="<?=$abs?>/back3nd/blog" class="nav-link">
+              <a id="#" href="<?=getenv('baseUrl')?>/back3nd/blog" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Blog</p>
               </a>

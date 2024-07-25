@@ -5,7 +5,7 @@
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="<?=$abs;?>/backend/pages/index.php?page=main-menu" class="nav-link">Home</a>
+      <a href="<?=getenv('baseUrl');?>/backend/pages/index.php?page=main-menu" class="nav-link">Home</a>
     </li>
   </ul>
 
@@ -33,12 +33,12 @@
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         <span class="dropdown-item dropdown-header">Notifications</span>
         <div class="dropdown-divider"></div>
-        <a href="<?= $abs; ?>/backend/pages/index.php?page=user&act=edit&id=<?= $sesi['id']; ?>" class="dropdown-item">
+        <a href="<?= getenv('baseUrl'); ?>/backend/pages/index.php?page=user&act=edit&id=<?= $sesi['id']; ?>" class="dropdown-item">
           <i class="fas fa-user mr-2"></i> Profile
           <span class="float-right text-muted text-sm badge badge-success"><?=isset($level['nama'])?></span>
         </a>
         <div class="dropdown-divider"></div>
-        <a href="<?= $abs; ?>/src/Views/back3nd/proses.php?aksi=logout" class="dropdown-item">
+        <a href="<?= getenv('baseUrl'); ?>/back3nd/proses.php?aksi=logout" class="dropdown-item">
           <i class="fas fa-sign-out-alt mr-2"></i> Logout
           <span class="float-right text-muted text-sm">end session</span>
         </a>

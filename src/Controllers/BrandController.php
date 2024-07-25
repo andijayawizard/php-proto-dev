@@ -11,8 +11,10 @@ class BrandController {
 	    return $items;
 	}
 	function getDetails(string $id) {
+		$apiKey=new ApiKey();
 		$url = getenv('baseUrl') . '/api/api.php/records/brands/'.$id.'?join=user&exclude=user.password';
-		$detail = json_decode(apiKey($url), true);		
+		$apiKey=$apiKey->apiKey($url);
+		$detail = json_decode($apiKey, true);		
 		return $detail;
 	}
 	public function getSize(int $size) {

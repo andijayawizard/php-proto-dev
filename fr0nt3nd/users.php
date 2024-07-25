@@ -1,16 +1,14 @@
 <?php
-require_once 'src/Controllers/BlogController.php';
-$items=new BlogController();
+require_once 'src/Controllers/UserController.php';
+$items=new UserController();
 $items=$items->getAll(1);
 ?>
-<h1><?=$page?></h1>
 <table id="example" class="table table-striped" style="width:100%">
   <thead>
     <tr>
       <th>#</th>
-      <th>Judul</th>
-      <th>Ringkasan</th>
-      <th>Keterangan</th>
+      <th>Username</th>
+      <th>ApiKey</th>     
     </tr>
   </thead>
   <tbody>
@@ -20,10 +18,9 @@ $items=$items->getAll(1);
       <tr>
         <td><?=$no++?></td>
         <td>
-          <a href="<?=$abs?>/blog/<?=$item['id']?>/<?=$item['slug']?>"><?=$item['nama']?></a>
+          <a href="<?=getenv('baseUrl')?>/users/<?=$item['id']?>/<?=$item['username']?>"><?=$item['username']?></a>          
         </td>
-        <td><?=$item['rgks']?></td>
-        <td><?=$item['ktrg']?></td>
+        <td><?=$item['api_key']?></td>
       </tr>
     <?php }?>
   </tbody>

@@ -1,3 +1,6 @@
+<?php
+require_once 'load.php';
+?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
   <head>

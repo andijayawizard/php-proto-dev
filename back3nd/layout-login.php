@@ -1,4 +1,4 @@
-<body class="hold-transition login-page dark-mode">
+<body class="hold-transition login-page dark-mode-">
   <div class="login-box">
     <div id="logout">
       <?php if (isset($_GET['signout'])) { ?>
@@ -21,7 +21,7 @@
     <div class="card">
       <div class="card-body login-card-body">
         <p class="login-box-msg">Sign in to start your session</p>
-        <form method="post" action="<?=$abs?>/src/Views/back3nd/proses.php?aksi=login" id="formLogin">
+        <form method="post" action="<?=getenv('baseUrl')?>/back3nd/proses.php?aksi=login" id="formLogin">
           <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Email" name="username">
             <div class="input-group-append">

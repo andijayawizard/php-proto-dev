@@ -22,7 +22,9 @@ class UserController {
 	}
 	public function getDetails(string $id) {
 		$url = getenv('baseUrl') . '/api/api.php/records/users/'.$id.'?join=user&exclude=user.password';
-		$detail = json_decode(apiKey($url), true);		
+		$apiKey=new ApiKey();
+		$apiKey=$apiKey->apiKey($url);
+		$detail = json_decode($apiKey, true);		
 		return $detail;
 	}
 	public function getSize(int $size) {

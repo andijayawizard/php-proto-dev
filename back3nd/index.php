@@ -1,4 +1,10 @@
 <?php
+require_once 'vendor/autoload.php';
+require_once 'src/Routes/index.php';
+
+$uri_exp=explode('/', $path);
+$page=$uri_exp[2];
+// require_once 'load.php';
 if (!empty($_SESSION)) {
 } else {
   session_start();

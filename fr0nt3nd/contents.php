@@ -10,11 +10,15 @@ switch ($page) {
     require "contact.php";
     break;
   case 'users':
-    if (isset($_GET['id'])) require "users-detail.php";
+    if (isset($uri_exp[3])) {
+      require "users-detail.php";
+    } 
     else require "users.php";
     break;
   case 'brands':
-    if (isset($_GET['id'])) require "brands-detail.php";
+    if (isset($uri_exp[3])) {
+      require "brands-detail.php";
+    } 
     else require "brands.php";
     break;
   case 'services':
