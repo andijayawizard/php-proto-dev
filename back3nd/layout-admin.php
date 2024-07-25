@@ -1,3 +1,6 @@
+<?php
+require_once 'load.php';
+?>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed text-sm">
   <div class="wrapper">
     <!-- Navbar -->

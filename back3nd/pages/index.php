@@ -9,7 +9,7 @@ if (!empty($_SESSION)) {
 <html lang="en" data-bs-theme="dark">
 <?php 
 include "head.php"; 
-require_once 'layout-login.php';
+require_once 'layout-admin.php';
 ?>
 <?php 
 // if (isset($_SESSION['ADMIN'])) { 
